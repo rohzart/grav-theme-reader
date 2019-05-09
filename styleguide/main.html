@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="stylesheet" href="./../css/bundle.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+    <script src="./../js/bundle.js"></script>
+</head>
+<body id="top" class="">
+
+    <header class="container">
+
+        <nav id="logo">
+            <a href="#">
+                <picture>
+                    <source srcset="" media="(min-width: 640px)">
+                    <img src="" alt="Reader">
+                </picture>
+            </a>
+        </nav>
+
+        <span id="openmenu">&#9776;</span>
+        
+        <div id="overlay" class="close">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="blur-svg">
+            <defs>
+              <filter id="blur-filter">
+                <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+              </filter>
+            </defs>
+          </svg>
+        </div>
+        
+        <div id="menu" class="close">
+        
+            <span id="closemenu">&times;</span>
+            <div class="clear"></div>
+        
+            <nav>
+              <ul>
+                  <li class="active"><a href="#">Home</a></li>
+                  <li><a href="#">page 2</a></li>
+                  <li><a href="#">page 3</a></li>
+              </ul>
+            </nav>
+        
+        </div>
+
+    </header>
+
+
+    <div id="content" class="container">
+
+      <main>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a eleifend est. Proin bibendum sapien erat. Duis vitae mattis nibh. Nullam dui purus, euismod a tempor ac, finibus ut erat. Morbi ut turpis sed elit iaculis venenatis sed nec odio. In consectetur pretium magna, ac auctor sapien imperdiet ut. Aenean eros tortor, elementum in quam sit amet, fermentum fringilla ex. Aliquam erat volutpat. Pellentesque finibus sapien ut tincidunt luctus. Vestibulum dapibus augue a sapien elementum semper. Ut sit amet feugiat tellus, ac rutrum ligula. Nunc mollis metus quam, nec convallis est accumsan at. Duis ullamcorper at nunc et consequat. Nam eget odio condimentum, eleifend lacus eu, accumsan orci.
+            </p>
+
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nisi purus, sagittis vel vulputate vel, lacinia placerat mi. Mauris mattis libero nec sem imperdiet, quis dictum neque vulputate. Praesent euismod ex ac orci consectetur, ac tincidunt lacus volutpat. Integer vehicula ullamcorper tortor, non consectetur lacus ultricies eget. Mauris eleifend ex eget tincidunt pellentesque. Vivamus at iaculis turpis, vel rutrum odio. Suspendisse hendrerit dui ut volutpat consequat. Duis vel ligula eget augue laoreet accumsan. Mauris quis tempus turpis. Nulla posuere pretium justo.
+            </p>
+        
+            <p>
+                Donec laoreet enim at laoreet egestas. Donec eleifend diam et porttitor gravida. Sed varius arcu at mauris mattis, sed iaculis orci aliquet. Nulla facilisi. Aenean rhoncus ut magna a aliquet. Maecenas scelerisque, nisi fermentum rutrum dapibus, libero dui maximus est, id aliquam neque nunc id arcu. Ut lacinia urna massa, ac tincidunt urna egestas sit amet. Nunc consequat maximus ipsum a fermentum. Nunc scelerisque ut risus eget semper. Proin suscipit feugiat arcu non mollis. Nam ac ipsum rutrum, tempus purus ut, mattis metus. Morbi sed mi vitae tortor semper pretium sit amet vitae dolor. Nulla sodales, tortor at efficitur vehicula, augue tortor congue magna, in dignissim ante eros vitae quam.
+            </p>
+
+            <p>
+                Integer vel felis turpis. Proin molestie tempus urna, non ullamcorper lorem sodales ac. In suscipit lacus id suscipit bibendum. Sed in risus ante. Praesent vehicula quis metus in consequat. Etiam sagittis nunc in dolor elementum placerat. Ut lobortis nisi vitae risus tristique, ut finibus lacus volutpat. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed a tincidunt risus, a efficitur mi. Curabitur libero libero, tincidunt vel dapibus sed, ullamcorper eget lorem. Maecenas convallis consequat dui, et imperdiet metus consectetur quis. Duis placerat viverra consectetur. Phasellus turpis nunc, eleifend ut vehicula ut, imperdiet eu orci. Phasellus quis iaculis massa.
+            </p>
+
+            <p>
+                Phasellus dapibus, nisi eu ullamcorper rhoncus, lectus sem hendrerit sem, vitae hendrerit ligula sapien nec ligula. Cras vel commodo nisi. Quisque euismod ligula ac massa dictum, non varius orci rutrum. Nunc quis nibh ut nunc consectetur lacinia non sit amet dui. Nulla lorem felis, accumsan ultricies augue in, feugiat pulvinar tortor. Nulla sit amet porttitor quam. Integer gravida nisi sed volutpat accumsan. Praesent ut efficitur velit. Suspendisse potenti. Pellentesque fermentum sem eget elit lacinia, quis rhoncus justo mattis. Nullam viverra sit amet libero id luctus. Phasellus tellus neque, placerat eget convallis vel, vestibulum sed erat.            
+            </p>
+        </main>
+      
+    </div>
+
+    <footer class="container">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a eleifend est. Proin bibendum sapien erat. Duis vitae mattis nibh. Nullam dui purus, euismod a tempor ac, finibus ut erat. Morbi ut turpis sed elit iaculis venenatis sed nec odio. In consectetur pretium magna, ac auctor sapien imperdiet ut. Aenean eros tortor, elementum in quam sit amet, fermentum fringilla ex. Aliquam erat volutpat. Pellentesque finibus sapien ut tincidunt luctus. Vestibulum dapibus augue a sapien elementum semper. Ut sit amet feugiat tellus, ac rutrum ligula. Nunc mollis metus quam, nec convallis est accumsan at. Duis ullamcorper at nunc et consequat. Nam eget odio condimentum, eleifend lacus eu, accumsan orci.
+        </p>
+    </footer>
+
+</body>
+</html>

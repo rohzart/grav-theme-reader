@@ -1,0 +1,46 @@
+.cycle-slideshow{
+    overflow: hidden;
+}
+
+.slider-title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.5);
+
+    .text{
+    padding: 1em;
+    font-size: 1.2em;
+    color: #fafafa;
+    }
+}
+
+#slider-pager {
+    text-align: center;
+    width: 100%;
+    z-index: 500;
+    overflow: hidden;
+    
+    span {
+        font-family: arial;
+        font-size: 50px;
+        line-height: 50px;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        color: #111;
+        cursor: pointer;
+        padding: 0 0.5em;
+
+        &.cycle-pager-active {
+            color: #c42026;
+        }
+    }
+    
+    > * {
+    cursor: pointer;
+    }
+}
+
+

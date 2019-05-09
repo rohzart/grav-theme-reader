@@ -1,0 +1,48 @@
+// Setting up Webpack
+// Webpack
+npm i --save-dev webpack webpack-cli webpack-dev-server
+
+// Webpack - Loaders
+npm i --save-dev babel-loader @babel/core @babel/preset-env typescript ts-loader sass node-sass sass-loader postcss-import postcss-loader autoprefixer cssnano css-loader style-loader html-loader file-loader
+
+// Webpack - Plugins
+npm i --save-dev clean-webpack-plugin compression-webpack-plugin mini-css-extract-plugin copy-webpack-plugin purifycss-webpack html-webpack-plugin
+// these Plugins might be helpful
+resolve-url-loader ???? might help
+FYI: extract-text-webpack-plugin is not to use with webpack >= v4
+
+// Webpack - Additional actions
+tsc --init (creates tsconfig.json)
+postcss.config.js (create manually)
+
+// TypeScript - Help with coding
+// TS typing to enable coding using jquery
+npm install --save-dev @types/jquery
+
+// helpful webpack template ref: ref: https://github.com/pixelgoo/simple_webpack_boilerplate
+
+
+// UI Resources
+
+// UI Resources - Normalize CSS - Required by Milligram
+npm i normalize.css --save
+
+// UI Resources - CSS Framework - Milligram https://milligram.io/
+npm i milligram --save
+
+// UI Resources - Font - Source Sans Pro
+npm i source-sans-pro --save
+
+// UI Resources - Icons - Feather icons https://feathericons.com/, https://github.com/feathericons/feather#quick-start
+npm install feather-icons --save
+
+
+
+// Milligram breakpoints
+/* Larger than mobile screen */
+@media (min-width: 40.0rem) { ... }
+/* Larger than tablet screen */
+@media (min-width: 80.0rem) { ... }
+/* Larger than desktop screen */
+@media (min-width: 120.0rem) { ... }
+

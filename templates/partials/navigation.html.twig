@@ -1,0 +1,29 @@
+<span id="openmenu">&#9776;</span>
+{# <span id="opensearch">&#9776; Search</span> #}
+{# {% include 'partials/simplesearch_searchbox.html.twig' %} #}
+
+<div id="overlay" class="close">
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="blur-svg">
+    <defs>
+      <filter id="blur-filter">
+        <feGaussianBlur stdDeviation="3"></feGaussianBlur>
+      </filter>
+    </defs>
+  </svg>
+</div>
+
+<div id="menu" class="close">
+
+    <span id="closemenu">&times;</span>
+    <div class="clear"></div>
+
+    <nav>
+      <ul>
+        {% for page in pages.children.visible %}
+          {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+          <li class="{{ current_page }}"><a href="{{ page.url }}">{{ page.menu }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+</div>

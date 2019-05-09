@@ -1,0 +1,14 @@
+{% set site_logo = theme_var('site_logo') %}
+{% set site_logo_mobile = theme_var('site_logo_mobile') %}
+<nav id="logo">
+    <a href="{{ home_url }}">
+        <picture>
+        {% if site_logo %}
+            <source srcset="{{ theme_url }}/img/{{ (site_logo|first).name }}" media="(min-width: 640px)">
+            {% if site_logo_mobile %}
+                <img src="{{ theme_url }}/img/{{ (site_logo_mobile|first).name }}" alt="{{ site.name }}">
+            {% endif %}
+        {% endif %}
+        </picture>
+    </a>
+</nav>

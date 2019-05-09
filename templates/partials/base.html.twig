@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="{{ grav.language.getActive ?: grav.config.site.default_lang }}" prefix="og: http://ogp.me/ns#">
+<head>
+{% block head %}
+  {% include 'partials/metadata.html.twig' %}
+  {% include 'partials/favicon.html.twig' %}
+  <title>{% if page.title %}{{ page.title|e('html') }} | {% endif %}{{ site.title|e('html') }}</title>
+  <link rel="canonical" href="{{ page.url(true, true) }}" />
+{% endblock head %}
+
+{% block stylesheets %}
+  {% do assets.addCss('theme://css/bundle.css',101) %}
+{% endblock %}
+
+{% block javascripts %}
+  {% do assets.addJs('jquery', 101) %}
+  {% do assets.addJs('theme://js/bundle.js', {group:'bottom'}) %}
+{% endblock %}
+
+{% block assets deferred %}
+  {{ assets.css()|raw }}
+  {{ assets.js()|raw }}
+{% endblock %}
+</head>
+<body id="top" class="{{ page.header.body_classes }}">
+
+    <header class="container">
+
+      {% include 'partials/logo.html.twig' %}
+
+      {% include 'partials/navigation.html.twig' %}
+
+    </header>
+
+
+    <div id="content" class="container">
+
+      {% block hero %}{% endblock %}
+
+      {% include 'partials/messages.html.twig' ignore missing %}
+
+      <main>
+        {% block content %}{% endblock %}
+      </main>
+      
+    </div>
+
+    <footer class="container">
+      {% include 'partials/footer.html.twig' %}
+    </footer>
+
+    {% block bottom %}
+      {{ assets.js('bottom')|raw }}
+    {% endblock %}
+
+</body>
+</html>

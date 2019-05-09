@@ -1,0 +1,36 @@
+title: Post
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      active: 1
+
+      fields:
+        content:
+          fields:
+
+            header.slider:
+              name: Links
+              type: list
+              style: vertical
+              label: Slider
+              fields:
+                .title:
+                  type: text
+                  label: Title
+                .thumbnail:
+                  type: file
+                  label: Slider Image
+                  destination: @self
+                  avoid_overwriting: true
+                  multiple: false
+                  limit: 1
+                  filesize: 1.5
+                  accept:
+                    - image/*
+                .url:
+                  type: text
+                  label: URL

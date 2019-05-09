@@ -1,0 +1,90 @@
+name: reader
+version: 0.1
+description: "A theme designed to elevate users' reading experience."
+icon: book
+author:
+  name: Rohit Razdan
+  email: rohzart@gmail.com
+  url: http://rohzart.com
+homepage: http://rohzart.com
+demo:
+keywords: 
+bugs:
+license:
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+  - admin
+  - auto-date
+  - archives
+  - blog-injector
+  - breadcrumbs
+  - email
+  - error
+  - external_links
+  - form
+  - grava11y
+  - image-captions
+  - jscomments
+  - login
+  - markdown-fontawesome
+  - markdown-notices
+  - page-inject
+  - pagination
+  - presentation
+  - presentation-deckset
+  - problems
+  - readingtime
+  - twigfeeds
+  - twigpcre
+  - simplesearch
+  - social-seo-metatags
+  - socialbuttons
+  - shortcode-core
+  - taxonomylist
+  - youtube
+
+
+form:
+
+  validation: loose
+
+  fields:
+  
+    site_logo:
+      type: file
+      label: Website Logo
+      size: large
+      destination: 'theme://img/'
+      multiple: false
+      description: 
+      accept:
+        - image/*
+        - svg
+
+    site_logo_mobile:
+      type: file
+      label: Website Logo for Mobile devices
+      size: large
+      destination: 'theme://img/'
+      multiple: false
+      description: 
+      accept:
+        - image/*
+        - svg
+
+    site_favicon:
+      type: file
+      label: Website's favicon
+      size: large
+      destination: 'theme://img/'
+      multiple: false
+      description: 
+      accept:
+        - ico
+
+    site_footer:
+      type: editor
+      label: Footer Content
+      description: 
+      
