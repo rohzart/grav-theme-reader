@@ -332,3 +332,13 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+# VS Code settings
+.vscode
+
+# Output folders
+dist/
+static/
+
+#Webpack hot updates
+hot/
