@@ -1,4 +1,4 @@
 export default function printMe() {
-    console.log('ASDChanges!!!');
+    console.log('Changes!!!');
     console.log('Updating change.js...');
 }

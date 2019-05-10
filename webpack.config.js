@@ -22,30 +22,22 @@ let webpackMode = 'development';
 // let webpackMode = 'production';
 
 // Paths
-const sourceFolderName = "";
+const sourceFolderName = ""; // trails with '/' if not empty
 const distributionFolderName = "static";
+
 // Paths - Styleguide pages
-const StyleGuideFolder = sourceFolderName + "styleguide";
-const pathStyleGuidePage1 = StyleGuideFolder + "/main.html";
 const pathStyleGuidePages = [ 
-    path.resolve(__dirname, "." + pathStyleGuidePage1)
+    path.resolve(__dirname, sourceFolderName + "styleguide/main.html")
 ];
+
 // Paths - Entry points
 const pathScss = path.resolve(__dirname, sourceFolderName + "scss/common.scss");
 const pathTscript = path.resolve(__dirname, sourceFolderName + "tscript/common.ts");
-const pathMain = path.resolve(__dirname, sourceFolderName + "testscripts/index.js");
+const pathTestScripts = path.resolve(__dirname, sourceFolderName + "testscripts/index.js");
 const entryDefinition = {
-    main: pathMain
+    // main: pathTestScripts
+    main: [ pathTestScripts, pathScss, pathTscript ].concat(pathStyleGuidePages)
 }
-// const entryDefinition = {
-//     main: [ pathMain, pathScss, pathTscript ]
-// }
-// const entryDefinition = {
-//     main: [ pathMain, pathScss, pathTscript ].concat(pathStyleGuidePages)
-// }
-// const entryDefinition = {
-//     main: path.resolve(__dirname, pathStyleGuidePage1)
-// }
 
 const paths = {
     entry: entryDefinition,
@@ -93,8 +85,8 @@ const compressionPlugin = new CompressionPlugin({
 });
 const htmlWebpackPlugin = new HtmlWebpackPlugin({
     title: 'From HtmlWebpackPlugin',
-    // template: pathStyleGuidePage1,
-    // filename: 'main.html'
+    template: sourceFolderName + "styleguide/main.html",
+    filename: 'index.html'
 });
 const hmr = new webpack.HotModuleReplacementPlugin();
 
@@ -123,22 +115,20 @@ module.exports = function (env, argv) {
         devServer: {
             port: 9000
             ,hot: true
-            ,contentBase: "./static"
-            // ,publicPath: "/static/"
-            // ,inline: true
-            // ,compress: true,
-            // ,historyApiFallback: true,
-            // ,noInfo: true,
-            // ,overlay: true
+            ,contentBase: "./dev"
+            ,compress: true
+            ,historyApiFallback: true
+            ,noInfo: true
+            ,overlay: true
         },
         module: {
             rules: [
-                // {
-                //     test: /\.html$/,
-                //     use: {
-                //         loader: 'html-loader'
-                //     }
-                // },
+                {
+                    test: /\.html$/,
+                    use: {
+                        loader: 'html-loader'
+                    }
+                },
                 {
                     test: /\.js$/,
                     exclude: /(node_modules|bower_components)/,
@@ -155,8 +145,12 @@ module.exports = function (env, argv) {
                     [
                         {
                             loader: MiniCssExtractPlugin.loader,
-                            options: { publicPath: "../" }
+                            options: { publicPath: "../", hmr: !isProduction, reloadAll: true }
                         },
+                        // {
+                        //     loader: "style-loader",
+                        //     options: { sourceMap: !isProduction }
+                        // },
                         {
                             loader: "css-loader",
                             options: { sourceMap: !isProduction, url: true }

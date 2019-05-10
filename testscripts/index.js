@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import changeMe from './change.js';
+import './test.css';
 
 function component() {
   const element = document.createElement('div');
