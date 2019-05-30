@@ -1,6 +1,5 @@
 #openmenu{
     position: fixed;
-    font-size: 1em;
     cursor: pointer;
     z-index: 200;
     top: auto;
@@ -12,6 +11,10 @@
     width: 100%;
     background: #fafafa;
     box-shadow: 0 0 5px #aaa;
+
+    &:before{
+        content: '\2630'; // hamburger
+    }
 
     @media (min-width: 550px) {
         top: 0;
@@ -74,7 +77,6 @@ body{
     transition: 0.5s;
     background-color: #fafafa;
     box-shadow: 0 0 5px #000;
-    font-size: 1.5rem;
     
     &.open{
         width: 300px;
@@ -107,9 +109,12 @@ body{
 }
 
 #closemenu{
-    float: right;
-    clear: both;
     cursor: pointer;
     padding: 0.5em 1em;
-    font-size: 30px;
+    display: block;
+    text-align: right;
+
+    &:before{
+        content: '\2715';
+    }
 }

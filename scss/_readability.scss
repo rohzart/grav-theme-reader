@@ -4,9 +4,24 @@
 
 body{
     color: $text-color;
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 2em; //1.6em;
+    font-family: $font-family;
+    font-size: $base-font-size + rem; //1.6em;
     font-weight: 300;
-    letter-spacing: .01em;
+    letter-spacing: .01rem;
     line-height: 2; //1.6;
+}
+
+$headings: h6 h5 h4 h3 h2 h1;
+$increment: 0;
+$last-value: $base-font-size;
+@each $heading in $headings {
+    #{$heading} {
+        $increment: $increment + 1;
+        $last-value: ($last-value + ($increment * $modular-ratio));
+        font-size: $last-value + rem;
+    }
+}
+
+p{
+    text-rendering: optimizeLegibility;
 }
