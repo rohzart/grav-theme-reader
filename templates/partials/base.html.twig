@@ -9,12 +9,12 @@
 {% endblock head %}
 
 {% block stylesheets %}
-  {% do assets.addCss('theme://css/bundle.css',101) %}
+  {% do assets.addCss('theme://static/css/bundle.css',101) %}
 {% endblock %}
 
 {% block javascripts %}
   {% do assets.addJs('jquery', 101) %}
-  {% do assets.addJs('theme://js/bundle.js', {group:'bottom'}) %}
+  {% do assets.addJs('theme://static/js/bundle.js', {group:'bottom'}) %}
 {% endblock %}
 
 {% block assets deferred %}
