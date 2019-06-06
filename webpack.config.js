@@ -36,7 +36,7 @@ const pathTscript = path.resolve(__dirname, sourceFolderName + "tscript/common.t
 const pathTestScripts = path.resolve(__dirname, sourceFolderName + "testscripts/index.js");
 const entryDefinition = {
     // main: pathTestScripts
-    main: [ pathTestScripts, pathScss, pathTscript ].concat(pathStyleGuidePages)
+    main: [ pathScss, pathTscript ].concat(pathStyleGuidePages)
 }
 
 const paths = {
