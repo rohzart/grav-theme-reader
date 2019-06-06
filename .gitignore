@@ -340,5 +340,8 @@ ASALocalRun/
 dist/
 static/
 
-#Webpack hot updates
+# Webpack hot updates
 hot/
+
+# SyncToy
+SyncToy_*.dat
